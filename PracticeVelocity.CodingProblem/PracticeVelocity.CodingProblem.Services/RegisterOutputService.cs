@@ -9,11 +9,11 @@ namespace PracticeVelocity.CodingProblem.Services
 {
     internal class RegisterOutputService : IOutputService
     {
-        private MultiplesService multipleService;
+        private MathService mathService;
 
         public RegisterOutputService()
         {
-            multipleService = new MultiplesService();
+            mathService = new MathService();
         }
 
         public OutputModel Get()
@@ -25,17 +25,17 @@ namespace PracticeVelocity.CodingProblem.Services
 
             foreach (var number in numbers)
             {
-                if (multipleService.IsMultiple(number, 2) && multipleService.IsMultiple(number, 7))
+                if (mathService.IsMultiple(number, 3) && mathService.IsMultiple(number, 5))
                 {
                     outputModel.Result.Add(CodingProblemConstants.Print.Register + " " + CodingProblemConstants.Print.Patient);
                     continue;
                 }
-                if (multipleService.IsMultiple(number, 3))
+                if (mathService.IsMultiple(number, 3))
                 {
                     outputModel.Result.Add(CodingProblemConstants.Print.Register);
                     continue;
                 }
-                if (multipleService.IsMultiple(number, 5))
+                if (mathService.IsMultiple(number, 5))
                 {
                     outputModel.Result.Add(CodingProblemConstants.Print.Patient);
                     continue;

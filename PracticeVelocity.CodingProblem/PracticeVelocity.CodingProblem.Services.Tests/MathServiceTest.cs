@@ -5,31 +5,31 @@ using PracticeVelocity.CodingProblem.Services;
 namespace PracticeVelocity.CodingProblem.Services.Tests
 {
     [TestClass]
-    public class MultipleServiceTest
+    public class MathServiceTest
     {
-        private MultiplesService multipleService;
+        private MathService mathService;
 
-        public MultipleServiceTest()
+        public MathServiceTest()
         {
-            multipleService = new MultiplesService();
+            mathService = new MathService();
         }
 
         [TestMethod]
         public void TestIsMultipleWhenDenominatorIs5AndNominatorIs25()
         {
-            Assert.IsTrue(multipleService.IsMultiple(25, 5));
+            Assert.IsTrue(mathService.IsMultiple(25, 5));
         }
 
         [TestMethod]
         public void TestIsMultipleWhenDenominatorIs7AndNominatorIs49()
         {
-            Assert.IsTrue(multipleService.IsMultiple(49, 7));
+            Assert.IsTrue(mathService.IsMultiple(49, 7));
         }
 
         [TestMethod]
         public void TestIsMultipleWhenDenominatorIs7AndNominatorIs50()
         {
-            Assert.IsFalse(multipleService.IsMultiple(50, 7));
+            Assert.IsFalse(mathService.IsMultiple(50, 7));
         }
     }
 }

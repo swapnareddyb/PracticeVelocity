@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticeVelocity.CodingProblem.Services
 {
-    public class MultiplesService
+    public class MathService
     {
         public bool IsMultiple(int numerator, int denominator)
         {

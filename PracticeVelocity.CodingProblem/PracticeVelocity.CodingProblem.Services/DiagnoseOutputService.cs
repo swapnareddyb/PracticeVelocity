@@ -10,11 +10,11 @@ namespace PracticeVelocity.CodingProblem.Services
 {
     internal class DiagnoseOutputService : IOutputService
     {
-        private MultiplesService multipleService;
+        private MathService multipleService;
 
         public DiagnoseOutputService()
         {
-            multipleService = new MultiplesService();
+            multipleService = new MathService();
         }
 
         public OutputModel Get()
