@@ -1,18 +1,18 @@
 ﻿@model PracticeVelocity.CodingProblem.Models.OutputModel
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "Practice Velocity";
 }
 
 
 @Html.ActionLink("Diagnose","Diagnose","Home") @Html.ActionLink("Register", "Register", "Home")
 
 
-<h2>Results for Event Type: @Model.EventType.ToString()</h2>
-
 @{
-    if (Model != null && Model.Result != null && Model.Result.Count > 0) {
-    foreach (String result in Model.Result)
+    if (Model != null && Model.Result != null && Model.Result.Count > 0)
     {
+        <h4>Event Type: @Model.EventType.ToString()</h4>
+        foreach (String result in Model.Result)
+        {
         <p> @result </p>
             MvcHtmlString.Create("<br />");
         }
