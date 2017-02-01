@@ -1,0 +1,13 @@
+﻿@model PracticeVelocity.CodingProblem.Models.OutputModel
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Results</h2>
+
+@{
+    foreach (String result in Model.Result){
+        <p> @result </p>
+        MvcHtmlString.Create("<br />");
+    }
+}
