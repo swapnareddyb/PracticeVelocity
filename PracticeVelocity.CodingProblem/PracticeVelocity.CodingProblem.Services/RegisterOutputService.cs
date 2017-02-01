@@ -19,7 +19,7 @@ namespace PracticeVelocity.CodingProblem.Services
         public OutputModel Get()
         {
             OutputModel outputModel = new OutputModel();
-            outputModel.EventType = EnumEventType.Diagnose;
+            outputModel.EventType = EnumEventType.Register;
             int[] numbers = Enumerable.Range(1, 100).ToArray();
             outputModel.Result = new List<string>();
 

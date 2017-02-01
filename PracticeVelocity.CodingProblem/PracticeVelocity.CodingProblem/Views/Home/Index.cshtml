@@ -3,11 +3,19 @@
     ViewBag.Title = "Home";
 }
 
-<h2>Results</h2>
+
+@Html.ActionLink("Diagnose","Diagnose","Home") @Html.ActionLink("Register", "Register", "Home")
+
+
+<h2>Results for Event Type: @Model.EventType.ToString()</h2>
 
 @{
-    foreach (String result in Model.Result){
+    if (Model != null && Model.Result != null && Model.Result.Count > 0) {
+    foreach (String result in Model.Result)
+    {
         <p> @result </p>
-        MvcHtmlString.Create("<br />");
+            MvcHtmlString.Create("<br />");
+        }
     }
+
 }

@@ -10,17 +10,17 @@ namespace PracticeVelocity.CodingProblem.Controllers
 
         public ActionResult Index()
         {
-            return Diagnose();
+            return View();
         }
 
         public ActionResult Diagnose()
         {
-            return View(GetViewModel(EnumEventType.Diagnose));
+            return View("Index",GetViewModel(EnumEventType.Diagnose));
         }
 
         public ActionResult Register()
         {
-            return View(GetViewModel(EnumEventType.Register));
+            return View("Index",GetViewModel(EnumEventType.Register));
         }
 
         private OutputModel GetViewModel(EnumEventType eventType)
